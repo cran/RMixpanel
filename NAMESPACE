@@ -1,0 +1,10 @@
+importFrom("utils", "URLencode", "download.file") 
+
+S3method(merge, matrix)
+
+export(
+merge.matrix,mixpanelCreateAccount,mixpanelGetAddiction,
+mixpanelGetData,mixpanelGetEvents,
+mixpanelGetEventsFromFiles,mixpanelGetEventsForUsers,mixpanelGetProfiles,
+mixpanelGetProfilesCount,mixpanelGetRetention,mixpanelGetSegmentation,
+createDateSequence)
