@@ -1,4 +1,4 @@
-## RMixpanel
+## RMixpanel - Mixpanel API client for R
 
 
 The package RMixpanel provides an interface from R to Mixpanel's Export API endpoints 
@@ -15,7 +15,7 @@ make the parameterization more convenient and do the conversion from JSON to a c
   - `retention/`: get the retention matrix using `mixpanelGetRetention`.
   - `addiction/`: get the addiction matrix using `mixpanelGetAddiction`.
   - `engage/`: get the requested people profiles using `mixpanelGetProfiles`.
-  - `stream/query/`: get events of selected people profiles using `mixpanelGetEventsForUsers`.
+  - `stream/query/`: get events of selected people profiles using `mixpanelGetEventsForProfiles`.
   - `export/`: get event data as R matrix using `mixpanelGetEvents`.
 - Get people profile count for custom queries using `mixpanelGetProfilesCount`. 
 - Pagination for the endpoint `export/`. This allows querying data for long time spans using multiple requests.  
@@ -84,7 +84,9 @@ In order to use the various methods of this package, we need to save the account
 
 #### Show histogram of KPI1 for selected people profiles 
 
-Given the people profiles have two properties named KPI1 and KPI2, the following lines of code will load these properties for all profiles matching the query `KPI1 >= 1.32` and fill an R data.frame with the corresponding data. The `hist` method could be used to generate a histogram of one of the KPI's.
+Given the people profiles have two properties named KPI1 and KPI2, the following lines of code will load these properties for all profiles matching the query `KPI1 >= 1.32` and fill an R data.frame with the corresponding data. The `hist` method could be used to generate a histogram of one of the KPI's. 
+
+More complex queries including logical operators and typecasts can be generated using the syntax described on [Mixpanel's documentation](https://mixpanel.com/docs/api-documentation/data-export-api#segmentation-expressions).
 
 ``` r
 > profiles = mixpanelGetProfiles(account, where='properties["KPI1"] > 1.32', 
@@ -126,6 +128,6 @@ Here an example without transforming the resulting JSON into handy R objects:
 ##        \"selector\": \"(properties[\\\"status\\\"] == \\\"loggedin\\)\", 
 ##        \"step_conv_ratio\": 0.06964335860713283, \"event\": \"OpenedView\"}, 
 ##      {\"count\": 333, \"avg_time\": 222, ...
-...
+##   ...
 ```
 

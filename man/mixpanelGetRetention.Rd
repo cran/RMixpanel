@@ -1,16 +1,12 @@
 \name{mixpanelGetRetention}
 \alias{mixpanelGetRetention}
 
-\title{
-Retention report.
-}
-\description{
-Get matrix of retention data 
-}
-\usage{
-mixpanelGetRetention(account, event, from, to, unit, retentionType, 
-  intervalCount, percentages, ...)
-}
+\title{Retention Report}
+
+\description{Get matrix of retention data from Mixpanel API.}
+
+\usage{mixpanelGetRetention(account, event, from, to, unit, retentionType, 
+  intervalCount, percentages, ...)}
 
 \arguments{
 \item{account}{A mixpanel account, as defined in \code{mixpanelCreateAccount}.}
@@ -23,18 +19,14 @@ mixpanelGetRetention(account, event, from, to, unit, retentionType,
 \item{percentages}{Output as counts or percentages?}
 \item{...}{ Additional arguments to Mixpanel API. E.g. born_event='Event name'  (needed for retention type 'birth'), or born_where='properties["Prop name"]=="value"' }
 }
-\value{
-Matrix consisting of one row for each cohort. The first column shows cohort sizes, the following columns the counts for subsequent periods. If \code{percentages} is TRUE, the counts are percentages (except column no. 1).
-}
-\references{
-\url{https://mixpanel.com/docs/api-documentation/data-export-api#retention-default}
-}
-\author{
-Meinhard Ploner}
 
-\seealso{
-\code{\link{mixpanelGetAddiction}}
-}
+\value{Matrix consisting of one row for each cohort. The first column holds the cohort sizes, the following columns the counts for subsequent periods. If \code{percentages} is \code{TRUE}, the counts are percentages (except first column).}
+
+\references{\url{https://mixpanel.com/docs/api-documentation/data-export-api#retention-default}}
+
+\author{Meinhard Ploner}
+
+\seealso{\code{\link{mixpanelGetAddiction}}}
 
 \examples{
 \dontrun{

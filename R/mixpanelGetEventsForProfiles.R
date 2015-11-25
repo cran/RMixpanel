@@ -1,4 +1,4 @@
-mixpanelGetEventsForUsers <- function(
+mixpanelGetEventsForProfiles <- function(
   account,
   distinctIDs=c("F05AD5E5-C4...", "437dbad6-72..."),    # Array of IDs.
   from="2010-01-01",   # ! Month numbers start HERE with 0!

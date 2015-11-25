@@ -3,13 +3,9 @@
 \alias{RMixpanel}
 \docType{package}
 
-\title{
-\packageTitle{RMixpanel}
-}
+\title{\packageTitle{RMixpanel}}
 
-\description{
-\packageDescription{RMixpanel}
-}
+\description{\packageDescription{RMixpanel}}
 
 \details{
 The DESCRIPTION file:
@@ -27,5 +23,5 @@ Maintainer: \packageMaintainer{RMixpanel}
 \url{https://mixpanel.com/docs/api-documentation/data-export-api}
 }
 
-\keyword{ package }
-\keyword{ mixpanel }
+\keyword{package}
+\keyword{mixpanel}

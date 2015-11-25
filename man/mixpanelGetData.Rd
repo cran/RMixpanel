@@ -1,7 +1,7 @@
 \name{mixpanelGetData}
 \alias{mixpanelGetData}
 
-\title{General method for Mixpanel API requests. }
+\title{General Method For Mixpanel API Requests}
 
 \description{This method handles the authentication and download of data from the Mixpanel API as well as data persistance. The method is used by many of the more specialized methods of this package.}
 

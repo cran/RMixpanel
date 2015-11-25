@@ -5,6 +5,6 @@ S3method(merge, matrix)
 export(
 merge.matrix,mixpanelCreateAccount,mixpanelGetAddiction,
 mixpanelGetData,mixpanelGetEvents,
-mixpanelGetEventsFromFiles,mixpanelGetEventsForUsers,mixpanelGetProfiles,
+mixpanelGetEventsFromFiles,mixpanelGetEventsForProfiles,mixpanelGetProfiles,
 mixpanelGetProfilesCount,mixpanelGetRetention,mixpanelGetSegmentation,
 createDateSequence)

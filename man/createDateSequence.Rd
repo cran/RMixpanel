@@ -1,13 +1,11 @@
 \name{createDateSequence}
 \alias{createDateSequence}
 
-\title{Generate Sequences of daily dates. }
+\title{Generate And Normalize Sequence Of Dates.}
 
-\description{Generate Regular Sequences of daily Dates for usage in other methods.}
+\description{Generate a range of dates and normalize it. Used by other methods of this package.}
 
-\usage{
-createDateSequence(from, to=from)
-}
+\usage{createDateSequence(from, to=from)}
 
 \arguments{
   \item{from}{Start date in either format <"yyyy-mm-dd"> or <yyyymmdd>. Inclusive.}

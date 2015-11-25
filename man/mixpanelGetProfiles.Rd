@@ -1,7 +1,7 @@
 \name{mixpanelGetProfiles}
 \alias{mixpanelGetProfiles}
 
-\title{Get Profiles from Mixpanel API.}
+\title{Get Profiles From Mixpanel API}
 
 \description{Get a matrix filled with profiles (also called 'users' or 'people') taken from the Mixpanel People API. }
 

@@ -1,9 +1,9 @@
 \name{mixpanelGetEvents}
 \alias{mixpanelGetEvents}
 
-\title{Get events from Mixpanel API.}
+\title{Get Events From Mixpanel API}
 
-\description{Get a matrix filled with events taken from the Mixpanel API. }
+\description{Get a matrix filled with event data from the Mixpanel API.}
 
 \usage{mixpanelGetEvents(account, event, from, to, daysPerBlock, select=TRUE, verbose=TRUE, ...)}
 
@@ -18,13 +18,13 @@
 \item{...}{Additional arguments to be included in the Mixpanel API request. E.g. where = "properties[\"$os\"]==\"iPhone OS\""). See also \url{https://mixpanel.com/docs/api-documentation/data-export-api#events-default}.}
 }
 
-\value{A character matrix showing one event per line. The first column represents the name of the event, the other column the event properties.  }
+\value{A character matrix showing one event per line. The first column represents the name of the event, the other column the event properties.}
 
 \author{Meinhard Ploner}
 
 \seealso{
 \code{\link{mixpanelGetProfiles}},
-\code{\link{mixpanelGetEventsForUsers}}
+\code{\link{mixpanelGetEventsForProfiles}}
 }
 
 

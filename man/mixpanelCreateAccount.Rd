@@ -1,7 +1,7 @@
 \name{mixpanelCreateAccount}
 \alias{mixpanelCreateAccount}
 
-\title{Create Mixpanel account}
+\title{Create Mixpanel Account}
 
 \description{Create object holding meta data of a Mixpanel project.}
 

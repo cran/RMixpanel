@@ -1,7 +1,7 @@
 \name{mixpanelGetProfilesCount}
 \alias{mixpanelGetProfilesCount}
 
-\title{Get the Profiles Count from Mixpanel API.}
+\title{Get Profiles Count From Mixpanel API}
 
 \description{Get the number of profiles (also called 'users' or 'people') conforming to the requested query from the Mixpanel People API. }
 
