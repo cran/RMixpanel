@@ -7,4 +7,6 @@ merge.matrix,mixpanelCreateAccount,mixpanelGetAddiction,
 mixpanelGetData,mixpanelGetEvents,
 mixpanelGetEventsFromFiles,mixpanelGetEventsForProfiles,mixpanelGetProfiles,
 mixpanelGetProfilesCount,mixpanelGetRetention,mixpanelGetSegmentation,
-createDateSequence)
+createDateSequence,
+eventsJson2RMatrix,
+profilesJson2RMatrix)

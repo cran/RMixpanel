@@ -43,7 +43,7 @@ require(RMixpanel)
 The package depends on
 - digest
 - jsonlite
-- RCurl
+- uuid
 
 ### Examples
 

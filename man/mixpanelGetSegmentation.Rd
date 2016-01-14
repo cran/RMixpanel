@@ -5,7 +5,7 @@
 
 \description{Get a matrix of events segmented by 1 or 2 properties. Event data is taken from the Mixpanel Segmentation API.}
 
-\usage{mixpanelGetSegmentation(account, event, from, to, unit, type, on, action, ...)}
+\usage{mixpanelGetSegmentation(account, event, from, to, unit, type, on, action, verbose, ...)}
 
 \arguments{
 \item{account}{A mixpanel account, as defined in \code{mixpanelCreateAccount}.}
@@ -16,6 +16,7 @@
 \item{type}{This can be "general", "unique", or "average".}
 \item{on}{Array of up to 2 property names for segmentation. An empty array returns un-segmented counts. }
 \item{action}{Could be "sum" or "average". If given, 1st property listed in \code{on} is aggregated by this function.}
+\item{verbose}{If \code{FALSE} less output is generated.}
 \item{...}{Additional arguments to Mixpanel API. See also \url{https://mixpanel.com/docs/api-documentation/data-export-api#segmentation-default}.}
 }
 

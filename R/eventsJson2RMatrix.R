@@ -24,9 +24,12 @@ eventsJson2RMatrix = function(
     ri = r2[, i]
     
     ## Dictionaries look like arrays...
-    if (!is.null(dim(ri)) && length(dim(ri == 2)))
-      d[, 1+i] = apply(ri, 1, function(z) paste(names(z), "=", z, sep="", collapse=",")) # Collapse dict.
-    else
+    if (!is.null(dim(ri)) && length(dim(ri) == 2)) {
+      if (ncol(ri) == 0)
+        d[, 1+i] = NA
+      else
+        d[, 1+i] = apply(ri, 1, function(z) paste(names(z), "=", z, sep="", collapse=",")) # Collapse dict.
+    } else
       d[, 1+i] = unlist(lapply(ri, function(z) if(is.null(z)) NA else paste(z, collapse=","))) # Collapse array
   }
   d

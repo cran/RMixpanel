@@ -7,6 +7,7 @@ mixpanelGetSegmentation <- function(
   type="unique",           # This can be "general", "unique", or "average".
   on='properties["$os"]',  # Array of up to 2 segmentation properties. An empty array returns un-segmented counts.
   action,                  # Could be "sum" or "average". If given, 1st property is aggregated by this function.
+  verbose=TRUE,
   ...                      # Additional arguments to Mixpanel API.
 ) {
   args = list(...)
@@ -31,11 +32,11 @@ mixpanelGetSegmentation <- function(
   if (segmentDim == 2) {
     args$inner = on[1]
     args$outer = on[2]
-    data = mixpanelGetData(account, "segmentation/multiseg", args, data=TRUE)
+    data = mixpanelGetData(account, "segmentation/multiseg", args, data=TRUE, verbose=verbose)
 
   } else {
     args$on = on 
-    data = mixpanelGetData(account, "segmentation/", args, data=TRUE)
+    data = mixpanelGetData(account, "segmentation/", args, data=TRUE, verbose=verbose)
   }
   
   ## API call.
