@@ -11,7 +11,7 @@
 The DESCRIPTION file:
 \packageDESCRIPTION{RMixpanel}
 \packageIndices{RMixpanel}
-The package provides access to the Mixpanel API. It allows to read raw data as well as to retrieve retention, addiction and segmentation data.
+The package provides access to the Mixpanel API. It allows to read raw data as well as to retrieve retention, addiction and segmentation data. Furthermore it is possible to load and update profiles.
 }
 
 \author{
@@ -19,9 +19,7 @@ The package provides access to the Mixpanel API. It allows to read raw data as w
 Maintainer: \packageMaintainer{RMixpanel}
 }
 
-\references{
-\url{https://mixpanel.com/docs/api-documentation/data-export-api}
-}
+\references{\url{https://mixpanel.com/docs/api-documentation/data-export-api}}
 
 \keyword{package}
 \keyword{mixpanel}

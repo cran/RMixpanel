@@ -14,7 +14,7 @@
 \item{to}{End date in either format <"yyyy-mm-dd"> or <yyyymmdd>. Inclusive.}
 \item{unit}{Defaults to 'day'.}
 \item{type}{This can be "general", "unique", or "average".}
-\item{on}{Array of up to 2 property names for segmentation. An empty array returns un-segmented counts. }
+\item{on}{Array of up to 2 property names for segmentation. An empty array returns un-segmented counts. E.g. 'properties["$os"]'}.
 \item{action}{Could be "sum" or "average". If given, 1st property listed in \code{on} is aggregated by this function.}
 \item{verbose}{If \code{FALSE} less output is generated.}
 \item{...}{Additional arguments to Mixpanel API. See also \url{https://mixpanel.com/docs/api-documentation/data-export-api#segmentation-default}.}

@@ -1,6 +1,6 @@
-a3758a8506901aeb26b56b29b2479bd3 *DESCRIPTION
+1cd15207f76a19267fdc4c6c8ef3e601 *DESCRIPTION
 2af5ed4e52126725a8839f628cac660b *LICENSE
-9a3e35b22c5fd47534daa9bdb8619633 *NAMESPACE
+0dc2e1ab7e84ee60e0e4d4ad0be12afa *NAMESPACE
 5c9006e8d4ec5fe9cbd6979d046e43a1 *R/Id.R
 1760bda8410986a8c80a013cb68f4e88 *R/arrayRtoJSON.R
 6097aac8e7a66e5ed57f00cdc1771cd7 *R/createDateSequence.R
@@ -13,14 +13,15 @@ ab063d763fd4de8f66ba2978f92e86cb *R/merge.matrix.R
 fa77ee59fc7daf72f910ff3c5eacabe4 *R/mixpanelGetEvents.R
 be3f3c631f5de5d9cbbdbae139038764 *R/mixpanelGetEventsForProfiles.R
 9a89d9d1efe559652d76b5d84b30bece *R/mixpanelGetEventsFromFiles.R
-a4082df2a5b3c29fdfb1e14f6368d686 *R/mixpanelGetPeople.R
-c9be53644ed94d2a85b361d721137cdb *R/mixpanelGetPeopleCount.R
+a4082df2a5b3c29fdfb1e14f6368d686 *R/mixpanelGetProfiles.R
+c9be53644ed94d2a85b361d721137cdb *R/mixpanelGetProfilesCount.R
 4c3bbffc4cf3457008ec7c5d7a32b107 *R/mixpanelGetRetention.R
 b943164ca2afb0aeba5acd2a6fa1521f *R/mixpanelGetSegmentation.R
+fa0eb320c43c8dac61f1c38e390ee99d *R/mixpanelUpdateProfile.R
 bc313967b6b050ecd5a2582129b27029 *R/profilesJson2RMatrix.R
-2e9f98b6f586aeec81af4307e74582c5 *README.md
-6c2bc46a8f7a7b757b06a8f745960de9 *build/partial.rdb
-99b72ed445649e213c0b8babe68aeb44 *man/RMixpanel-package.Rd
+61487a94fb4c451ada773a77a6e85530 *README.md
+b74b91df26c479c467f478d262b9d3e8 *build/partial.rdb
+9ea9ec1cd9251805c0f2e2a80ecc78b2 *man/RMixpanel-package.Rd
 de7428c75dbca50be8ff6d0b040b90cf *man/createDateSequence.Rd
 a6839afbd7845d5af8e23dd8c6686d3c *man/eventsJson2RMatrix.Rd
 3e4c408cae170d815633df55526711ea *man/merge.matrix.Rd
@@ -33,5 +34,6 @@ e56aac2cb991e47454507f88fc780ba7 *man/mixpanelGetEventsForProfiles.Rd
 4208e64866de2a52b86a49542487452d *man/mixpanelGetProfiles.Rd
 843e6071d97b0102f40da5cd03dc1b5d *man/mixpanelGetProfilesCount.Rd
 84fb546539396ea674a1d2908004de79 *man/mixpanelGetRetention.Rd
-f46279d9db83b4e16cc6104a395fc83e *man/mixpanelGetSegmentation.Rd
+1ec504a9803fc6dcf464b0a3bf3e45dc *man/mixpanelGetSegmentation.Rd
+7be526fa1033162218ee3ca96ad54f3e *man/mixpanelUpdateProfile.Rd
 2989934d5062eae5ee591d2fb3acd6a0 *man/profilesJson2RMatrix.Rd
