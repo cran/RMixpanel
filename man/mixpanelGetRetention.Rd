@@ -3,10 +3,10 @@
 
 \title{Retention Report}
 
-\description{Get matrix of retention data from Mixpanel API.}
+\description{Get retention data from Mixpanel API. The resulting object can be printed nicely using \code{print.retention}.}
 
 \usage{mixpanelGetRetention(account, event, from, to, unit, retentionType, 
-  intervalCount, percentages, ...)}
+  intervalCount, ...)}
 
 \arguments{
 \item{account}{A mixpanel account, as defined in \code{mixpanelCreateAccount}.}
@@ -14,13 +14,17 @@
 \item{from}{Start date in either format <"yyyy-mm-dd"> or <yyyymmdd>. Inclusive. }
 \item{to}{End date in either format <"yyyy-mm-dd"> or <yyyymmdd>. Inclusive.}
 \item{unit}{Defaults to 'day'.}
-\item{retentionType}{'birth' (=First time) or 'compounded' (=Recurring). Defaults to 'birth'.}
+\item{retentionType}{\code{birth} (=First time) or \code{compounded} (=Recurring). Defaults to 'birth'.}
 \item{intervalCount}{Number of intervals per cohort to return.}
-\item{percentages}{Output as counts or percentages?}
-\item{...}{ Additional arguments to Mixpanel API. E.g. born_event='Event name'  (needed for retention type 'birth'), or born_where='properties["Prop name"]=="value"' }
+\item{...}{ Additional arguments to Mixpanel API. E.g. \code{born_event='Event name'}  (needed for retention type 'birth'), or \code{born_where='properties["Prop name"]=="value"'}.}
 }
 
-\value{Matrix consisting of one row for each cohort. The first column holds the cohort sizes, the following columns the counts for subsequent periods. If \code{percentages} is \code{TRUE}, the counts are percentages (except first column).}
+\value{Object of class \code{retention} including 
+\item{dates}{Start dates of each cohort.}
+\item{cohortCount}{Size of cohorts (people count).}
+\item{retainCount}{Number of retained people.}
+\item{retainPerc}{Percentage of retained people.}
+}
 
 \references{\url{https://mixpanel.com/docs/api-documentation/data-export-api#retention-default}}
 
@@ -37,7 +41,7 @@ account = mixpanelCreateAccount("ProjectName",
                                 secret="168e7e...", 
                                 key="543c55...")
 mixpanelGetRetention(account, born_event="AppInstall", event="WatchedItem", 
-                     from=20150701, to=20151101, unit="week", percentages=TRUE)
+                     from=20150701, to=20151101, unit="week")
 }}
 
 \keyword{mixpanel}

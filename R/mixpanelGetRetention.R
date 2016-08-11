@@ -6,7 +6,6 @@ mixpanelGetRetention <- function(
   unit="day",             # Defaults to 'day'.
   retentionType="birth",  # 'birth' (=First time) or 'compounded' (=Recurring). Defaults to 'birth'.
   intervalCount=15,       # Number of intervals per cohort to return.
-  percentages=TRUE,       # Output as counts or percentages?
   ...                     # Additional arguments to Mixpanel API beside of <event>, <date_from>, <date_to>
                           # >> born_event='AppInstall'   # Needed for retention type 'birth'!!!
                           # >> born_where='properties["VersionString"]=="1.1"'
@@ -39,7 +38,15 @@ mixpanelGetRetention <- function(
   data[, 1] = unlist(counts)
   
   data = data[order(dates), , drop=FALSE]
-  if (percentages)
-    data[, -1] = data[, -1] / data[, 1] * 100
-  data
+  
+  obj = list(
+    dates=rownames(data),
+    cohortCount=data[, 1],
+    retainCount=data[, -1],
+    retainPerc=data[, -1] / data[, 1] * 100
+    )
+  
+  class(obj) = "retention"
+  obj
 }
+
