@@ -1,5 +1,5 @@
-f806ff8148bbdbc2c3accc6d18b4988b *DESCRIPTION
-2af5ed4e52126725a8839f628cac660b *LICENSE
+3e602120e7d70ec564cd25cc3c1f3bb5 *DESCRIPTION
+722ccf9a22f62e02a01e4140c1cb2609 *LICENSE
 2da8e2ba09c524f708e88360fe1226b6 *NAMESPACE
 5c9006e8d4ec5fe9cbd6979d046e43a1 *R/Id.R
 1760bda8410986a8c80a013cb68f4e88 *R/arrayRtoJSON.R
@@ -10,7 +10,6 @@ ab063d763fd4de8f66ba2978f92e86cb *R/merge.matrix.R
 350f4ceca84e0c8fa0425b22a100004e *R/mixpanelCreateAccount.R
 8bb7fa61c811eb864b60529e889a80c9 *R/mixpanelGetAddiction.R
 8d981d0fde59ea1b204dae09e958dcc2 *R/mixpanelGetData.R
-0c4748619c6e925883c7a8f28b788c48 *R/mixpanelGetDataDeprecated.R
 fa77ee59fc7daf72f910ff3c5eacabe4 *R/mixpanelGetEvents.R
 be3f3c631f5de5d9cbbdbae139038764 *R/mixpanelGetEventsForProfiles.R
 9a89d9d1efe559652d76b5d84b30bece *R/mixpanelGetEventsFromFiles.R
@@ -18,13 +17,13 @@ a4082df2a5b3c29fdfb1e14f6368d686 *R/mixpanelGetProfiles.R
 c9be53644ed94d2a85b361d721137cdb *R/mixpanelGetProfilesCount.R
 5e7a7d1506f7e6e314fc5899d13437a8 *R/mixpanelGetRetention.R
 b943164ca2afb0aeba5acd2a6fa1521f *R/mixpanelGetSegmentation.R
-745cc5010b5de9f0374e154e72e79249 *R/mixpanelJQLQuery.R
+1d1a15748ceca0280166225b162af28e *R/mixpanelJQLQuery.R
 fa0eb320c43c8dac61f1c38e390ee99d *R/mixpanelUpdateProfile.R
 5565c4104f8ec442b3cf3e9b5b81e3f7 *R/plot.retention.R
 114e699611294fafd9ca53c63690b55f *R/print.retention.R
 bc313967b6b050ecd5a2582129b27029 *R/profilesJson2RMatrix.R
-e006f56e03b5b406324871b79dacbede *README.md
-18cb0f013d3798dde8d8516adfd4900d *build/partial.rdb
+26eeec609bee3f6b491d0986fd9d08c0 *README.md
+e35c137e80f08d66d9b15717082b5d07 *build/partial.rdb
 9ea9ec1cd9251805c0f2e2a80ecc78b2 *man/RMixpanel-package.Rd
 de7428c75dbca50be8ff6d0b040b90cf *man/createDateSequence.Rd
 a6839afbd7845d5af8e23dd8c6686d3c *man/eventsJson2RMatrix.Rd
@@ -39,7 +38,7 @@ e56aac2cb991e47454507f88fc780ba7 *man/mixpanelGetEventsForProfiles.Rd
 843e6071d97b0102f40da5cd03dc1b5d *man/mixpanelGetProfilesCount.Rd
 c0ae6ddc8c10f09d3c87b1eda33f1fe5 *man/mixpanelGetRetention.Rd
 1ec504a9803fc6dcf464b0a3bf3e45dc *man/mixpanelGetSegmentation.Rd
-7e8d4f247df0428cab4f6d3c8123f758 *man/mixpanelJQLQuery.Rd
+b1f0f2034289a9b9824c8354b082121a *man/mixpanelJQLQuery.Rd
 7be526fa1033162218ee3ca96ad54f3e *man/mixpanelUpdateProfile.Rd
 1539341c242a9a46243d77f9bd027658 *man/plot.retention.Rd
 d6e5c8c1a8d44760eb8e800fcac8eabc *man/print.retention.Rd

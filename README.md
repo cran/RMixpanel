@@ -19,6 +19,7 @@ make the parameterization more convenient and do the conversion from JSON to a c
     - update or delete a people profile using `mixpanelUpdateProfile`.
   - `stream/query/`: get events of selected people profiles using `mixpanelGetEventsForProfiles`.
   - `export/`: get event data as R matrix using `mixpanelGetEvents`.
+  - `jql/`: perform custom queries using `mixpanelJQLQuery`.
 - Get people profile count for custom queries using `mixpanelGetProfilesCount`. 
 - Pagination for the endpoint `export/`. This allows querying data for long time spans using multiple requests.  
 - Different levels of verbosity (log).
@@ -29,7 +30,7 @@ if the property count varies over requested events or people profiles.
 
 ``` r
 require(devtools)
-devtools::install_github("7factory/RMixpanel")
+devtools::install_github("ploner/RMixpanel")
 require(RMixpanel)
 ```
 
@@ -69,10 +70,13 @@ In order to use the various methods of this package, we need to save the account
 #### Weekly retentions as percentages
 
 ``` r
-> mixpanelGetRetention(account, born_event="AppInstall", event="WatchedItem", 
-                       from=20150701, to=20151101, unit="week", percentages=TRUE)
+> retentions <- mixpanelGetRetention(account, born_event="AppInstall", event="WatchedItem", 
+                                     from=20150701, to=20151101, unit="week")
+> print(retentions)
 ## Example output:
-##            count         0         1         2         3       ... ...
+## Retention Matrix
+## Row names are Cohort Start Dates. Column names are Periods (0 -> 0 to 1 units)
+##            Count         0         1         2         3       ... ...
 ## 2015-06-29    17  94.11765 29.411765 29.411765 29.411765 ...
 ## 2015-07-06    38 100.00000 31.578947 18.421050 ...       
 ...
@@ -161,5 +165,55 @@ Here an example without transforming the resulting JSON into handy R objects:
 ##        \"step_conv_ratio\": 0.06964335860713283, \"event\": \"OpenedView\"}, 
 ##      {\"count\": 333, \"avg_time\": 222, ...
 ##   ...
+```
+
+
+#### JQL: simple in-line query 
+
+The JQL Query language opens a wide spectrum of possibilities. As a simple example we extract the event count per user ('distinct_id'). The Mixpanel JQL API Reference can be found on https://mixpanel.com/help/reference/jql/api-reference#api/transformations/reduce.   
+
+``` r
+jqlQuery <- '
+function main() {
+  return Events({
+    from_date: "2016-01-01",
+    to_date: "2016-12-31"
+  })
+  .groupByUser(mixpanel.reducer.count())
+}'
+
+res <- mixpanelJQLQuery(account, jqlQuery,
+                        columnNames=c("distinctID", "Count"), toNumeric=2)
+hist(res$Count)
+```
+
+#### Get DAU using JQL 
+
+Here we show how to calculate the metric Daily Active Users (DAU) when the user ID is different from the distinct_id. First write the JQL query and save it into a file named jqlDAU.js:
+
+``` js
+function today(addDays) {
+  var day = new Date(); 
+  day.setDate(day.getDate() + (addDays || 0));
+  return day.toISOString().substr(0, 10);
+}
+
+function main() {
+  return Events({
+    from_date: today(dayFrom),
+    to_date: today(dayTo)
+  })
+  .groupBy(["properties.UserID", getDay], function(count, events) {
+    count = count || 0;
+    return count + events.length;
+  })
+  .groupBy(["key.1"], mixpanel.reducer.count());
+}
+```
+
+The parameters <dayFrom> and <dayTo> define the date range. As you may see, they are not defined in the JQL script. To be transparant, we add them directly in the final R call. Setting them to -7 and -1 gives the DAU values for the last 7 whole days:
+
+``` r
+mixpanelJQLQuery(account, jqlString="dayFrom=-7; dayTo=-1;", jqlScripts="jqlDAU.js")
 ```
 

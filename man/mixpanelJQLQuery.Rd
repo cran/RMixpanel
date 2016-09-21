@@ -6,14 +6,14 @@
 \description{This method performs a JQL Query with some custom script as parameter. The query string can be given either as character vector or saved into a file and passed via file name.}
 
 \usage{
-mixpanelJQLQuery(account, jqlString, jqlScripts, path=".", columnNames, toNumeric=c())
+mixpanelJQLQuery(account, jqlString, jqlScripts, paths=".", columnNames, toNumeric=c())
 }
 
 \arguments{
   \item{account}{A mixpanel account, as defined in \code{mixpanelCreateAccount}.}
   \item{jqlString}{JQL script as string.}
   \item{jqlScripts}{List of JQL script file names.}
-  \item{path}{Path to search JS files.}
+  \item{paths}{Paths to search JS files.}
   \item{columnNames}{Column names for the resulting data.frame. }
   \item{toNumeric}{Column indices which should be converted to numeric.}
 }
