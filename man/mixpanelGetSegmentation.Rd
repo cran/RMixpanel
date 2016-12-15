@@ -9,7 +9,7 @@
 
 \arguments{
 \item{account}{A mixpanel account, as defined in \code{mixpanelCreateAccount}.}
-\item{event}{Event name. If empty, all events are returned.}
+\item{event}{Event name. If empty, all events are returned. Custom events are supported, if \code{account} is set up correctly using \code{mixpanelCreateAccount.}}
 \item{from}{Start date in either format <"yyyy-mm-dd"> or <yyyymmdd>. Inclusive. }
 \item{to}{End date in either format <"yyyy-mm-dd"> or <yyyymmdd>. Inclusive.}
 \item{unit}{Defaults to 'day'.}
@@ -23,11 +23,7 @@
 \value{2 or 3-dimensional array showing event counts. The first dimension represents the time in the specified unit. The other dimension(s) are determined by the segmention properties.}
 
 \references{
-\url{https://mixpanel.com/docs/api-documentation/data-export-api#segmentation-default},
-
-\url{https://mixpanel.com/docs/api-documentation/data-export-api#segmentation-sum},
-
-\url{https://mixpanel.com/docs/api-documentation/data-export-api#segmentation-average}
+\url{https://mixpanel.com/help/reference/data-export-api#segmentation}
 }
 
 \author{Meinhard Ploner}

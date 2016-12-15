@@ -10,6 +10,8 @@ mixpanelGetSegmentation <- function(
   verbose=TRUE,
   ...                      # Additional arguments to Mixpanel API.
 ) {
+  event <- customEventNameEncode(account, event)
+  
   args = list(...)
   args$event = event
   args$from_date = createDateSequence(from)
@@ -63,6 +65,9 @@ mixpanelGetSegmentation <- function(
     data[order(timeNames), , , drop=FALSE]
     
   } else { # outDim == 2 or 1.
+    if(length(values) == 0)
+      return(matrix(NA, 0, 0))
+      
     timeLabels = names(values[[1]])
     n = length(timeLabels)
     groups = names(values)

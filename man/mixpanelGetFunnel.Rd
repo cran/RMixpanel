@@ -3,7 +3,7 @@
 
 \title{Funnel}
 
-\description{Get funnel data from Mixpanel API.}
+\description{Get funnel data from Mixpanel API. Custom events are names accordingly, if \code{account} is set up correctly using \code{mixpanelCreateAccount.}}
 
 \usage{mixpanelGetFunnel(account, funnel, from, to=from, verbose=TRUE, ...)}
 

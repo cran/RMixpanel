@@ -1,14 +1,14 @@
 mixpanelGetFunnel <- function(
-  account,
-  funnel,                 # Name <or> ID of the funnel.
+  account,            # Mixpanel account with credentials and evt. custom event names. 
+  funnel,             # Name <or> ID of the funnel.
   from,
   to=from,
-  verbose=TRUE,        # Level of verbosity.
-                          # the first step in the funnel. May not be greater than 90 days.
-  ...                     # Additional arguments to Mixpanel API. E.g.
-                          # >> interval=5
-                          # >> unit="week"
-                          # >> len=90
+  verbose=TRUE,       # Level of verbosity.
+  ...                 # Additional arguments to Mixpanel API. E.g.
+                      # >> interval=5
+                      # >> unit="week"
+                      # >> len=90
+                      # the first step in the funnel. May not be greater than 90 days.
 ) {
   ## Extract funnel ID when <funnel> is name instead of ID.
   funnelList <- mixpanelGetFunnelList(account)
@@ -26,6 +26,19 @@ mixpanelGetFunnel <- function(
   data = jsonlite::fromJSON(data)
   res <- lapply(data$data, "[[", "steps")
   class(res) <- c("funnel", "list")
+  
+  if("customEvents" %in% names(account)) {
+    ## Update all funnels.
+    for(iFunnel in 1:length(res)) {
+      funnel <- res[[iFunnel]]
+      
+      for(i in which(!is.na(funnel$custom_event)))
+        funnel$event[i] <- funnel$goal[i] <- customEventNameDecode(account, funnel$custom_event_id[i]) 
+      
+      res[[iFunnel]] <- funnel
+    }
+  }
+  
   res
 }
 
