@@ -27,6 +27,8 @@ mixpanelGetData <- function(
     code = -1
     try({
       res <- RCurl::getURL(url)
+      ## Create vector of events from \n-separated character scalar. 
+      res <- unlist(strsplit(res, "[\n\r]"))
       break
     }, silent=TRUE)
     
@@ -40,7 +42,7 @@ mixpanelGetData <- function(
       filePath = paste(account$dataPath, "/", fileName, args$from_date, ".txt", sep="") # Events of 1 day.
     else
       filePath = paste(account$dataPath, "/", fileName, ".txt", sep="")
-    cat(res, file=filePath)
+    cat(res, file=filePath, sep="\n")
   }
   
   if (data) {

@@ -1,6 +1,6 @@
 Package: RMixpanel
-Version: 0.6-0
-Date: 2017-01-11
+Version: 0.6-1
+Date: 2017-01-20
 Title: API for Mixpanel
 Authors@R: c(
   person("Meinhard", "Ploner", role=c("aut", "cre", "cph"), email="meinhard.ploner@gmail.com"),
@@ -13,10 +13,10 @@ Imports: jsonlite, uuid, RCurl
 License: MIT + file LICENSE
 URL: https://github.com/ploner/RMixpanel, http://www.mixpanel.com
 NeedsCompilation: no
-Packaged: 2017-01-11 15:35:48 UTC; ploner meinhard
+Packaged: 2017-01-20 08:24:35 UTC; ploner meinhard
 Author: Meinhard Ploner [aut, cre, cph],
   ProSiebenSat.1 Digital GmbH [cph],
   BCG Digital Ventures GmbH [cph]
 Maintainer: Meinhard Ploner <meinhard.ploner@gmail.com>
 Repository: CRAN
-Date/Publication: 2017-01-11 17:13:13
+Date/Publication: 2017-01-20 11:16:52

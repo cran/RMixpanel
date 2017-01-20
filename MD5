@@ -1,4 +1,4 @@
-8a38eac73e147048a25aad2ad9a83f12 *DESCRIPTION
+96560e3ebd648ac3916a65c8186c5b09 *DESCRIPTION
 d07cbbb3aa1214b1dff136305e25a2fd *LICENSE
 55bb3d8f36a2baf7b1d5fda7d3e28f87 *NAMESPACE
 5c9006e8d4ec5fe9cbd6979d046e43a1 *R/Id.R
@@ -11,12 +11,12 @@ b2bb53d19ae665de1aa1034d1391785e *R/eventsJson2RMatrix.R
 ab063d763fd4de8f66ba2978f92e86cb *R/merge.matrix.R
 62a56a809e6cad6d0daa25ecfbf7fea1 *R/mixpanelCreateAccount.R
 8bb7fa61c811eb864b60529e889a80c9 *R/mixpanelGetAddiction.R
-091965d56216466068d0598bbfa2b48e *R/mixpanelGetData.R
-fa77ee59fc7daf72f910ff3c5eacabe4 *R/mixpanelGetEvents.R
+c14f135519aef47f4162bb7281f955dd *R/mixpanelGetData.R
+eb427cd171e72c3d942a76d9967dc96d *R/mixpanelGetEvents.R
 be3f3c631f5de5d9cbbdbae139038764 *R/mixpanelGetEventsForProfiles.R
-9a89d9d1efe559652d76b5d84b30bece *R/mixpanelGetEventsFromFiles.R
-7af7905a746973beb6a3696c6a3a921b *R/mixpanelGetFunnel.R
-8ea448e2af25522ba966a8efce928552 *R/mixpanelGetFunnelList.R
+e07b73612947668e2bb17a80dffb94df *R/mixpanelGetEventsFromFiles.R
+7696af809532d6d0af91d06db5a0ae3a *R/mixpanelGetFunnel.R
+f3ba3601b270493be9839255e75e00e9 *R/mixpanelGetFunnelList.R
 a4082df2a5b3c29fdfb1e14f6368d686 *R/mixpanelGetProfiles.R
 c9be53644ed94d2a85b361d721137cdb *R/mixpanelGetProfilesCount.R
 37d4541553de66d5dafcb3c37521cd28 *R/mixpanelGetRetention.R
@@ -27,7 +27,7 @@ fa0eb320c43c8dac61f1c38e390ee99d *R/mixpanelUpdateProfile.R
 114e699611294fafd9ca53c63690b55f *R/print.retention.R
 bc313967b6b050ecd5a2582129b27029 *R/profilesJson2RMatrix.R
 8acf4d0a62d3d4b16259f154098dd975 *README.md
-c79d5e752f57c16fdd57c6fce096e40c *build/partial.rdb
+28bbd528c3836c76eae1731601a50292 *build/partial.rdb
 68bce251622cf398a19d2656472cd975 *man/RMixpanel-package.Rd
 c109bc11e240b2d96218944ee9ca23eb *man/createDateSequence.Rd
 a6839afbd7845d5af8e23dd8c6686d3c *man/eventsJson2RMatrix.Rd
@@ -35,11 +35,11 @@ a6839afbd7845d5af8e23dd8c6686d3c *man/eventsJson2RMatrix.Rd
 668eccfb0cdf8abd7574c6935abf2070 *man/mixpanelCreateAccount.Rd
 a3f9c19624f467d8e109f7908c28bc30 *man/mixpanelGetAddiction.Rd
 ffa3aa2e1924a46a518dca516712a238 *man/mixpanelGetData.Rd
-c2012b039a7b66c6c90273ebcac60669 *man/mixpanelGetEvents.Rd
+a8fc59d0c40e33532cf7d76b077a225e *man/mixpanelGetEvents.Rd
 e56aac2cb991e47454507f88fc780ba7 *man/mixpanelGetEventsForProfiles.Rd
-5b3d5cfc814694b5fa798455803f5837 *man/mixpanelGetEventsFromFiles.Rd
+dc8671cb82bc96a9a22eccb3695fcc8a *man/mixpanelGetEventsFromFiles.Rd
 b5f6482e8b369f59fb3350792c214eaa *man/mixpanelGetFunnel.Rd
-6f4009d3c9483e0c1945b4c85587011e *man/mixpanelGetFunnelList.Rd
+1224be360d48b069380b4cddbbe872bc *man/mixpanelGetFunnelList.Rd
 68221d25fdaf92ae7062ade4937f7392 *man/mixpanelGetProfiles.Rd
 bf6dbf9a6bc45b28e2009889854ffbb0 *man/mixpanelGetProfilesCount.Rd
 e09d8e0f203945e2ad6012c3cd820511 *man/mixpanelGetRetention.Rd
