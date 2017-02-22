@@ -1,4 +1,4 @@
-96560e3ebd648ac3916a65c8186c5b09 *DESCRIPTION
+1780844f14b33ef01da005f8818b06c0 *DESCRIPTION
 d07cbbb3aa1214b1dff136305e25a2fd *LICENSE
 55bb3d8f36a2baf7b1d5fda7d3e28f87 *NAMESPACE
 5c9006e8d4ec5fe9cbd6979d046e43a1 *R/Id.R
@@ -21,13 +21,13 @@ a4082df2a5b3c29fdfb1e14f6368d686 *R/mixpanelGetProfiles.R
 c9be53644ed94d2a85b361d721137cdb *R/mixpanelGetProfilesCount.R
 37d4541553de66d5dafcb3c37521cd28 *R/mixpanelGetRetention.R
 e03bcdc17698cd52ae88d722d24f7179 *R/mixpanelGetSegmentation.R
-668f26a301ae8585ab3ee41abd3ce7d8 *R/mixpanelJQLQuery.R
+0ed0108561f6421a9b8e5c5b449ecbfd *R/mixpanelJQLQuery.R
 fa0eb320c43c8dac61f1c38e390ee99d *R/mixpanelUpdateProfile.R
 5565c4104f8ec442b3cf3e9b5b81e3f7 *R/plot.retention.R
 114e699611294fafd9ca53c63690b55f *R/print.retention.R
 bc313967b6b050ecd5a2582129b27029 *R/profilesJson2RMatrix.R
 8acf4d0a62d3d4b16259f154098dd975 *README.md
-28bbd528c3836c76eae1731601a50292 *build/partial.rdb
+28212262cb676e4329c161b9cc592722 *build/partial.rdb
 68bce251622cf398a19d2656472cd975 *man/RMixpanel-package.Rd
 c109bc11e240b2d96218944ee9ca23eb *man/createDateSequence.Rd
 a6839afbd7845d5af8e23dd8c6686d3c *man/eventsJson2RMatrix.Rd
