@@ -1,4 +1,4 @@
-0b929530c5c0214fc1ac260994f75462 *DESCRIPTION
+1e0a0453d5ea94f4ff23859953d82691 *DESCRIPTION
 d07cbbb3aa1214b1dff136305e25a2fd *LICENSE
 55bb3d8f36a2baf7b1d5fda7d3e28f87 *NAMESPACE
 5c9006e8d4ec5fe9cbd6979d046e43a1 *R/Id.R
@@ -11,7 +11,7 @@ b2bb53d19ae665de1aa1034d1391785e *R/eventsJson2RMatrix.R
 ab063d763fd4de8f66ba2978f92e86cb *R/merge.matrix.R
 62a56a809e6cad6d0daa25ecfbf7fea1 *R/mixpanelCreateAccount.R
 8bb7fa61c811eb864b60529e889a80c9 *R/mixpanelGetAddiction.R
-b5d1de1c4c77b3f1075e221af0fa9065 *R/mixpanelGetData.R
+645117285fca63ecc3b4822e3c13e017 *R/mixpanelGetData.R
 552240dfb56947a3c6378fa9f5a6ddd9 *R/mixpanelGetEvents.R
 e809c9621cff2b9b4adfd79f15db6233 *R/mixpanelGetEventsForProfiles.R
 e07b73612947668e2bb17a80dffb94df *R/mixpanelGetEventsFromFiles.R
@@ -27,7 +27,7 @@ fa0eb320c43c8dac61f1c38e390ee99d *R/mixpanelUpdateProfile.R
 114e699611294fafd9ca53c63690b55f *R/print.retention.R
 bc313967b6b050ecd5a2582129b27029 *R/profilesJson2RMatrix.R
 eaeda0327fcca4deab3eb1a55ef4ab4e *README.md
-1ffc41402498f4430d74bb7df7f9b6f2 *build/partial.rdb
+210da0710020c88dd68ad26fa65509a3 *build/partial.rdb
 68bce251622cf398a19d2656472cd975 *man/RMixpanel-package.Rd
 c109bc11e240b2d96218944ee9ca23eb *man/createDateSequence.Rd
 a6839afbd7845d5af8e23dd8c6686d3c *man/eventsJson2RMatrix.Rd
